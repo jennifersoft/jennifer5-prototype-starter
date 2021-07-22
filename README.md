@@ -2,5 +2,7 @@
 
 ## Getting Started
 
+```shell
 npm install
 npm start
+```
