@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Btn from '@vuejs/component/button/Btn';
 import ListSelector from '@vuejs/component/ListSelector/ListSelector';
-import FontStyle from '@entry/popup/themeTool/component/ui/fontStyle';
 import SimpleChart from './SimpleChart';
 import SideBar from './components/side-bar';
 import styled from 'vue-styled-components';
@@ -31,7 +30,6 @@ new Vue({
         Wrapper,
         ListSelector,
         Btn,
-        FontStyle,
         SimpleChart,
         SideBar,
     },
@@ -68,13 +66,6 @@ new Vue({
                                     titleLabel={'Metrics'}
                                     onCheck={this.printMetrics}
                                     style="width: 320px; height: 240px; margin-top: 16px;" />
-                    </div>
-                    <div class="item">
-                        <h3>JENNIFER5 화면에서 재정의 된 컴포넌트</h3>
-                        <font-style font-size={this.fontSize}
-                                font-weight={this.fontWeight}
-                                on-change-font-size={this.onChangeFontSize}
-                                on-change-font-weight={this.onChangeFontWeight} />
                     </div>
                     <div class="item">
                         <h3>외부 라이브러리(d3.js) 차트</h3>

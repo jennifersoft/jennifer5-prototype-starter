@@ -5,7 +5,6 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const CaseSensitivePathsPlugin = require("case-sensitive-paths-webpack-plugin");
 
 const outputPath = path.resolve(__dirname, "out");
-const entryPath = path.resolve(__dirname, "packages/entry");
 const libraryPath = path.resolve(__dirname, "packages/library");
 const layoutPath = path.resolve(__dirname, "packages/layout");
 const commonPath = path.resolve(__dirname, "packages/common");
@@ -82,7 +81,6 @@ module.exports = {
   resolve: {
     alias: {
       vue$: "vue/dist/vue.esm.js",
-      "@entry": entryPath,
       "@library": libraryPath,
       "@layout": layoutPath,
       "@common": commonPath,
