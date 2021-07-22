@@ -1,4 +1,4 @@
-# jennifer5-client
+# jennifer5-prototype-starter
 
 ## Getting Started
 
