@@ -1,1 +1,1 @@
-# jennifer5-frontend
+# jennifer5-client
