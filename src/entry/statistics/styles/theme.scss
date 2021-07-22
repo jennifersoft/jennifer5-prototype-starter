@@ -1,0 +1,24 @@
+@import "~@common/scss/themes.scss";
+
+$themes: (
+		classic: (
+				subject-font-color: #333,
+				table-caption-font-color: #3c3c3c,
+		),
+		dark: (
+				subject-font-color: #d5d5d5,
+				table-caption-font-color: #d5d5d5,
+		),
+);
+
+.layout-body {
+	@include themify($themes) {
+		h3 {
+			color: themed('subject-font-color');
+		}
+
+		table caption, .table-msg {
+			color: themed('table-caption-font-color');
+		}
+	}
+}

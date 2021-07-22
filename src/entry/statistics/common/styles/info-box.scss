@@ -1,0 +1,68 @@
+@import "~@common/scss/themes.scss";
+$themes: (
+	classic: (
+		typography-color-primary: #212121,
+		typography-color-grey1: #616161,
+		border-color: #e8e8e8,
+	),
+	dark: (
+		typography-color-primary: #e8e8e8,
+		typography-color-grey1: #999999,
+		border-color: #4e4e4e,
+	),
+);
+@mixin info-box($row-height: 32px, $margin-between: 4px) {
+	@include themify($themes) {
+		box-sizing: border-box;
+		padding: 0 16px;
+		height: 242px;
+		border: 1px solid themed('border-color');
+		border-radius: 4px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.title {
+			font-size: 14px;
+			font-weight: bold;
+			color: themed('typography-color-primary');
+			.caption {
+				margin-left: 8px;
+				font-size: 12px;
+				font-weight: normal;
+				color: themed('typography-color-grey1');
+			}
+		}
+		.content {
+			margin-top: $margin-between;
+			> .item {
+				&:not(:first-child) {
+					border-top: 1px solid themed('border-color');
+				}
+				height: $row-height;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				box-sizing: border-box;
+				.name {
+					color: themed('typography-color-grey1');
+				}
+				.value {
+					color: themed('typography-color-primary');
+					&.instance {
+						max-width: 200px !important;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+					&.score {
+						font-weight: bold;
+					}
+					::v-deep .division {
+						font-weight: normal;
+						color: themed('border-color');
+					}
+				}
+			}
+		}
+	}
+}

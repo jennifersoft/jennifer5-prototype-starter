@@ -1,0 +1,32 @@
+#vue_app {
+    height: 100%;
+
+    .tooltip-balloon {
+        z-index: 1001;
+    }
+
+    .open-menu-layer {
+        top: 56px;
+        z-index: 1000;
+    }
+
+    > .contents {
+        height: calc(100vh - 110px);
+
+        > .aries-ui-navigation-bar {
+            margin: 24px 24px 12px 24px;
+            width: auto !important;
+            .label-with-dropdown {
+                .row-list {
+                    max-height: 160px !important;
+                }
+            }
+        }
+
+        > .chart {
+            margin-top: 10px;
+            padding: 0px 22px;
+            height: calc(100% - 38px - 48px);
+        }
+    }
+}

@@ -1,0 +1,259 @@
+body {
+  overflow: hidden;
+
+  #app {
+    height: 100%;
+
+    textarea {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      resize: none;
+      white-space: pre;
+      border-radius: 4px;
+      padding: 20px 10px 20px 20px;
+      word-wrap: normal;
+      box-sizing: border-box;
+      word-break: break-all;
+      background: rgba(0, 0, 0, 0);
+    }
+
+    > .main-bottom {
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      width: calc(100% - 72px);
+      height: calc(100% - 40px);
+      overflow: hidden;
+
+      > .talk-list {
+        width: 300px;
+      }
+
+      > .talk-contents {
+        width: calc(100% - 300px);
+      }
+
+      > .no-data {
+        width: 100%;
+        height: 24px;
+        padding: 90px;
+        margin: 0px 24px;
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+
+    /* TODO: 기존의 토크 컨텐츠 호환성을 위해 추가함 */
+    .profile-popup-view {
+      cursor: pointer;
+    }
+
+    .aries-ui-window {
+      .title {
+        position: relative;
+        height: 30px;
+        input[type=text] {
+          position: absolute;
+          border: 0px;
+          width: 100%;
+          background-color: transparent;
+        }
+      }
+
+      .main.dragover {
+        > .message {
+          display: block;
+        }
+      }
+      .main {
+        position: relative;
+
+        > .message {
+          display: none;
+          position: absolute;
+          width: 760px;
+          height: 376px;
+          line-height: 376px;
+          text-align: center;
+          top: 0px;
+        }
+
+        > textarea {
+          padding: 0px;
+          height: 330px;
+          background-color: transparent;
+        }
+
+        > .files {
+          display: flex;
+          margin-top: 10px;
+          height: 36px;
+          overflow: auto;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          > .file {
+            position: relative;
+            width: 200px;
+            padding: 8px 17px;
+            margin-right: 5px;
+            font-size: 12px;
+            border-radius: 3px;
+
+            > div {
+              width: 170px;
+              display: inline-block;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+
+              > small {
+                font-size: 11px;
+              }
+            }
+
+            > span {
+              position: absolute;
+              top: 10px;
+              right: 12px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      > .foot {
+        position: relative;
+
+        .file-input {
+          position: absolute;
+          width: 0;
+          height: 24px;
+          opacity: 0;
+          left: 20px;
+          top: 10px;
+          cursor: pointer;
+          padding-left: 24px;
+          z-index: 1;
+        }
+        .file-icon {
+          position: absolute;
+          left: 20px;
+          top: 10px;
+          z-index: 0;
+        }
+        .file-text {
+          position: absolute;
+          left: 55px;
+          top: 10px;
+          width: 600px;
+          font-size: 11px;
+          opacity: 0.6;
+        }
+      }
+    }
+
+    .row {
+      &:before, &:after {
+        display: table;
+        content: " ";
+        clear: both;
+      }
+    }
+
+    .col {
+      position: relative;
+      float: left;
+      min-height: 1px;
+      box-sizing: border-box;
+
+      &.col-3 {
+        width: 25%;
+      }
+      &.col-6 {
+        width: 50%;
+      }
+    }
+  }
+}
+
+body.classic #app {
+  $searchBarTitleFontColor: #212121;
+  $searchBarBorderColor: 1px solid #e8e8e8;
+  $searchBarBackgroundColor: #fff;
+  $searchBarInputBorderColor: 1px solid #dadada;
+  $searchBarInputBackgroundColor: #fff;
+  $searchBarInputTitleFontColor: #212121;
+  $searchBarIconFontColor: #616161;
+  $searchBarSeparatorBorderColor: 1px solid #e8e8e8;
+  $talkListFontColor: #333;
+  $talkListBorderColor: 1px solid #e8e8e8;
+  $talkListDescriptionDateColor: #999;
+  $talkListPageNavigationBackgroundColor: #f5f5f5;
+
+  $talkListActiveBackgroundColor: #ede5ff;
+  $talkListActiveFontColor: #6330ee;
+  $talkListActiveDescriptionDateColor: #865fef;
+  $talkListHoverBackgroundColor: #f2f2f2;
+
+  $talkArticleBorderColor:  1px solid #e8e8e8;
+  $talkArticleFontColor: #333;
+  $talkArticleDescriptionDateFontColor: #999;
+  $talkCommentsInputBackgroundColor: #f8f8f8;
+  $talkCommentsInputTextAreaBackgroundColor: #fff;
+  $talkCommentsInputTextAreaBorderColor: 1px solid #dadada;
+  $talkCommentsCommentFontColor: #333;
+  $talkCommentsCommentBorderColor: 1px solid #e8e8e8;
+  $talkCommentsCommentDateFontColor: #999;
+
+  $talkFormCommonFontColor: #333;
+  $talkFormFileBorderColor: 1px solid #dadada;
+  $talkFormFileBackgroundColor: #fff;
+  $talkFormFileNameFontColor: #7745ff;
+  $talkFormFileSizeFontColor: #999999;
+  $talkFormFileDragBackgroundColor: #dcdcdc;
+
+  @import "theme.scss";
+}
+
+body.dark #app {
+  $searchBarTitleFontColor: #fff;
+  $searchBarBorderColor: 1px solid #4e4e4e;
+  $searchBarBackgroundColor: #191919;
+  $searchBarInputBorderColor: 1px solid #424242;
+  $searchBarInputBackgroundColor: #191919;
+  $searchBarInputTitleFontColor: #707070;
+  $searchBarIconFontColor: #999;
+  $searchBarSeparatorBorderColor: 1px solid #424242;
+  $talkListFontColor: #e8e8e8;
+  $talkListBorderColor: 1px solid #424242;
+  $talkListDescriptionDateColor: #707070;
+  $talkListPageNavigationBackgroundColor: #303030;
+
+  $talkListActiveBackgroundColor: #272034;
+  $talkListActiveFontColor: #a47cff;
+  $talkListActiveDescriptionDateColor: #8560d3;
+  $talkListHoverBackgroundColor: #3a3a3a;
+
+  $talkArticleBorderColor:  1px solid #424242;
+  $talkArticleFontColor: #e8e8e8;
+  $talkArticleDescriptionDateFontColor: #707070;
+  $talkCommentsInputBackgroundColor: #313131;
+  $talkCommentsInputTextAreaBackgroundColor: #1c1c1c;
+  $talkCommentsInputTextAreaBorderColor: 1px solid #424242;
+  $talkCommentsCommentFontColor: #e8e8e8;
+  $talkCommentsCommentBorderColor: 1px solid #424242;
+  $talkCommentsCommentDateFontColor: #707070;
+
+  $talkFormCommonFontColor: #707070;
+  $talkFormFileBorderColor: 1px solid #4e4e4e;
+  $talkFormFileBackgroundColor: #212121;
+  $talkFormFileNameFontColor: #a47cff;
+  $talkFormFileSizeFontColor: #707070;
+  $talkFormFileDragBackgroundColor: #212121;
+
+  @import "theme.scss";
+}

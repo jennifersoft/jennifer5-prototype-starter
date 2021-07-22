@@ -1,0 +1,48 @@
+@import '~@common/scss/themes.scss';
+
+$themes: (
+	classic: (
+			behaviors-hover-color: rgba(0, 0, 0, 0.05),
+			behaviors-press-color: rgba(0, 0, 0, 0.16),
+			typography-color-primary: #212121,
+			typography-color-grey1: #616161,
+	),
+	dark: (
+			behaviors-hover-color: rgba(255, 255, 255, 0.05),
+			behaviors-press-color: rgba(255, 255, 255, 0.16),
+			typography-color-primary: #e8e8e8,
+			typography-color-grey1: #999999,
+	),
+);
+
+@mixin hover-and-active {
+	@include themify($themes) {
+
+		position: relative;
+		&::before {
+			position: absolute;
+			content: '';
+			top: 0;
+			height: 100%;
+			left: 0;
+			width: 100%;
+			border-radius: inherit;
+			transition: background-color .15s, color .15s;
+		}
+
+		&:hover {
+			&::before {
+				background-color: themed('behaviors-hover-color');
+			}
+			color: themed('typography-color-primary');
+		}
+
+		&:active,
+		&.pressed {
+			&::before {
+				background-color: themed('behaviors-press-color');
+			}
+			color: themed('typography-color-grey1');
+		}
+	}
+}

@@ -1,0 +1,34 @@
+@import '../themes.scss';
+
+@mixin loading-page {
+  @include themify($themes) {
+    position: relative;
+    height: 100%;
+    background: themed('loading-page-background-color');
+    color: themed('loading-page-font-color');
+
+    > .layer {
+      position: absolute;
+      width: 100%;
+      top: 20%;
+
+      > * {
+        text-align: center;
+      }
+
+      > .top {
+        margin-bottom: 65px;
+      }
+
+      > .title {
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
+
+      > .detail {
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.table-panel {
+    .toolbar {
+        padding: 8px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-content: center;
+        .tool-right {
+            display: flex;
+            justify-content: flex-end;
+            .receive-all-stack-btn.prevent-event {
+                cursor: default;
+            }
+        }
+    }
+}

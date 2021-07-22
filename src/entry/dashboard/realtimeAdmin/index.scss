@@ -1,0 +1,13 @@
+#dashboardContentBody {
+    padding: 0 !important;
+
+    #vue_app {
+        height: calc(100% - 56px);
+    }
+}
+
+.layout-contents {
+    > #vue_app {
+        height: 100%;
+    }
+}

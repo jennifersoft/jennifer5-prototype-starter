@@ -1,0 +1,10 @@
+$themes: (
+    classic: (
+        setting-table-drag-icon-color: #999,
+    ),
+    dark: (
+        setting-table-drag-icon-color: #999,
+    ),
+);
+
+@import '~@common/scss/themes.scss';

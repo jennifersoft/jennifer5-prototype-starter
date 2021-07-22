@@ -1,0 +1,38 @@
+body {
+  overflow: hidden;
+  header {
+    display: none !important;
+  }
+  .queryBuilder {
+    padding: 0px !important;
+  }
+}
+
+body.classic {
+  $titleBackgroundColor: #fff;
+  $titleFontColor: #333;
+  $splitterBorderColor: #e8e8e8;
+  $splitterBackgroundColor: #fff;
+  $splitterFontColor: #333;
+  $splitterActiveFontColor: #6330e0;
+  $menuActiveBorderColor: #8945ee;
+  $schemaBackgroundColor: #fbfbfb;
+  $outputBackgroundColor: #fff;
+
+  @import "theme.scss";
+}
+
+body.dark {
+  $titleBackgroundColor: linear-gradient(to bottom, #1f1f1f, #111111 99%), linear-gradient(to bottom, #ffffff, #f3f3f3);
+  $titleFontColor: #fff;
+  $splitterBorderColor: #404040;
+  $splitterBackgroundColor: #1c1c1c;
+  $splitterFontColor: #d5d5d5;
+  $splitterActiveFontColor: #6330e0;
+  $menuActiveBorderColor: #8945ee;
+  $schemaBackgroundColor: #1c1c1c;
+  $outputBackgroundColor: #181818;
+
+  @import "theme.scss";
+}
+

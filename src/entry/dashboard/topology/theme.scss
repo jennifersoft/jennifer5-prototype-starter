@@ -1,0 +1,21 @@
+#chartShow {
+  border: $topologyXViewChartShowBtnBorder;
+  box-shadow: $topologyXViewChartShowBtnBoxShadow;
+
+  &:active {
+    background-color: $topologyXViewChartShowBtnActiveBgColor;
+    box-shadow: $topologyXViewChartShowBtnActiveBoxShadow;
+  }
+
+}
+
+#displayName, #showHiddenNode{
+  color: $topologyDisplayNameTextColor;
+}
+
+
+#topology-config{
+  .bottom-line {
+    border-bottom: $topologyConfigBottomLineBorder;
+  }
+}

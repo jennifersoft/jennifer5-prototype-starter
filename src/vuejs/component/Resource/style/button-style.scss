@@ -1,0 +1,53 @@
+@import "~@vuejs/component/themes.scss";
+@mixin button-style {
+	@include themify($themes) {
+		border-radius: 3px;
+		color: themed('typography-color-grey1');
+		padding: 0 10px;
+		font-size: 12px;
+		height: 26px;
+		line-height: 26px;
+		border: 1px solid themed('border-color');
+		background-color: transparent;
+		position: relative;
+		display: inline-block;
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;
+		text-decoration: none;
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 0;
+			height: 100%;
+			left: 0;
+			width: 100%;
+			border-radius: inherit;
+			transition: background-color .15s, color .15s;
+		}
+
+		&:hover {
+			&::before {
+				background-color: themed('behaviors-hover-color');
+			}
+			color: themed('typography-color-primary');
+		}
+
+		&:active {
+			&::before {
+				background-color: themed('behaviors-press-color');
+			}
+			color: themed('typography-color-grey1');
+		}
+
+		&:focus-visible {
+			outline: none;
+			box-shadow: 0 0 0 1px themed('background-color-purple');
+			z-index: 1;
+		}
+		&:focus:not(:focus-visible) {
+			outline: none;
+		}
+	}
+}

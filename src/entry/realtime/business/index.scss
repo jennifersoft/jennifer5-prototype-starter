@@ -1,0 +1,53 @@
+@import '~@vuejs/component/themes.scss';
+
+#dashboardContentBody {
+    padding: 0 !important;
+
+    #vue_app {
+        height: calc(100% - 56px);
+    }
+}
+
+.layout-contents {
+    > #vue_app {
+        height: 100%;
+
+        @include themify($themes) {
+            .topbar-wrapper {
+                display: flex;
+
+                > div {
+                    display: inline-flex;
+
+                    &.barbtn {
+                        text-align: center;
+                        padding-top: 4px;
+                        padding-left: 24px;
+                        border-bottom: solid 1px themed('topbar-border-color');
+
+                        > span {
+                            cursor: pointer;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 4px 8px 0px 8px;
+                            height: 22px;
+                            border-radius: 12px;
+                            color: themed('icon-color');
+                            &:hover {
+                                background-color: themed(
+                                    'toggle-behaviors-hover-color'
+                                );
+                                color: themed('toggle-label-color');
+                            }
+                        }
+                    }
+
+                    &.topbar {
+                        flex: 1;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

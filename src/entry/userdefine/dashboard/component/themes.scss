@@ -1,0 +1,27 @@
+//  from david
+// 1개의 themes 파일을 개별의 vue, scss 에서 로드하고 싶어서 써본 방법이다.
+//https://medium.com/@dmitriy.borodiy/easy-color-theming-with-scss-bc38fd5734d1
+// 원래는 @use를 써보고 싶었지만 dart scss 에서만 지원이 가능하다. https://sass-lang.com/documentation/at-rules/use
+
+$themes: (
+    classic: (
+        message-layer-text-color-when-none-userdefine: #616161,
+        message-layer-bg-color-when-none-userdefine: #f9f9f9,
+        component-box-shadow: 1px 1px 3px 1px rgba(187, 187, 187, 0.8),
+        chart-box-border-color: #e8e8e8,
+        chart-bg-color: #fff,
+        chart-interaction-icon-color: #999999,
+        chart-interaction-icon-hover-color: #494949,
+    ),
+    dark: (
+        message-layer-text-color-when-none-userdefine: #999999,
+        message-layer-bg-color-when-none-userdefine: #222222,
+        component-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.8),
+        chart-box-border-color: #4e4e4e,
+        chart-bg-color: #1c1c1c,
+        chart-interaction-icon-color: #999999,
+        chart-interaction-icon-hover-color: #ffffff,
+    ),
+);
+
+@import '~@common/scss/themes.scss';

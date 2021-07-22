@@ -1,0 +1,77 @@
+.statistics {
+    overflow-x: hidden;
+	--header-height: 120px;
+
+	.layout-body {
+        position: fixed;
+        overflow-y: auto;
+		max-height: calc(100% - var(--header-height));
+		padding: 24px;
+
+		table {
+			border: 0;
+			width: 100%;
+		}
+
+		li, ul, td {
+			margin: 0;
+			padding: 0;
+		}
+
+		h3 {
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		section {
+			margin-bottom: 50px;
+		}
+
+		table caption {
+			margin-bottom: 8px;
+			margin-top: 15px;
+			font-size: 12px;
+			font-weight: bold;
+			text-align: left;
+		}
+	}
+
+	.table-msg {
+		margin: 10px 0;
+		padding-right: 5px;
+		text-align: right;
+	}
+
+	.table-chart {
+		margin-bottom: 20px;
+	}
+}
+
+@media print {
+	body {
+		padding: 5px;
+		margin: 0;
+
+		> .layout-root {
+			> .layout-toolbar {
+				display: none;
+			}
+
+			> .layout-contents {
+				.statistics-header {
+					> .common-header > :not(.subject) {
+						display: none;
+					}
+					> #print-confirm {
+						display: none;
+					}
+				}
+				> #app .layout-body {
+					position: static;
+				}
+			}
+		}
+	}
+}
+
+@import "~@entry/statistics/styles/theme.scss";

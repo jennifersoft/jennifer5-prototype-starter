@@ -1,0 +1,61 @@
+$themes: (
+    classic: (
+        left-background-color: #f9f9f9,
+        left-border-color: #e8e8e8,
+        link-font-color: #616161,
+        link-hover-font-color: #212121,
+        link-active-font-color: #6330ee,
+    ),
+    dark: (
+        left-background-color: #222222,
+        left-border-color: #4e4e4e,
+        link-font-color: #999999,
+        link-hover-font-color: #e8e8e8,
+        link-active-font-color: #a47cff,
+    ),
+);
+
+@import '~@common/scss/themes.scss';
+
+#vue_app {
+    --top-padding: 66px;
+
+    > .main-contents {
+        display: flex;
+        height: calc(100vh - var(--top-padding));
+
+        @include themify($themes) {
+            > .left {
+                flex: 0 208px;
+                overflow-y: hidden;
+                padding: 32px 24px;
+                background-color: themed('left-background-color');
+                border-right: 1px solid themed('left-border-color');
+
+                > a {
+                    display: block;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 32px;
+                    color: themed('link-font-color');
+                    &.active {
+                        color: themed('link-active-font-color');
+                        cursor: default;
+                    }
+                    &.submenu {
+                        font-weight: 500;
+                        margin-left: 28px;
+                    }
+                    &:hover:not(.active) {
+                        color: themed('link-hover-font-color');
+                    }
+                }
+            }
+
+            > .right {
+                flex: 1;
+                overflow-y: auto;
+            }
+        }
+    }
+}

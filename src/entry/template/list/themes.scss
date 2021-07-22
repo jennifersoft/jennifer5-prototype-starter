@@ -1,0 +1,28 @@
+$themes: (
+    classic: (
+        'table-report-link-font-color': #6330ee,
+        'table-build-dist-font-color': #212121,
+        'table-build-dist-daily-background-color': #cce4f9,
+        'table-build-dist-weekly-background-color': #cce7e1,
+        'table-build-dist-monthly-background-color': #d7d7d5,
+        'table-build-dist-custom-background-color': #fddfcc,
+        'table-build-button-border-color': #e8e8e8,
+        'table-build-button-font-color': #616161,
+        'table-build-icon-hover-background-color': rgba(0, 0, 0, 0.05),
+        'table-build-icon-asset-url': url('../asset/icon-settings_classic.svg'),
+    ),
+    dark: (
+        'table-report-link-font-color': #a47cff,
+        'table-build-dist-font-color': #fff,
+        'table-build-dist-daily-background-color': #4986e7,
+        'table-build-dist-weekly-background-color': #2da2bb,
+        'table-build-dist-monthly-background-color': #5e5e5e,
+        'table-build-dist-custom-background-color': #e57128,
+        'table-build-button-border-color': #4e4e4e,
+        'table-build-button-font-color': #999,
+        'table-build-icon-hover-background-color': rgba(255, 255, 255, 0.05),
+        'table-build-icon-asset-url': url('../asset/icon-settings_dark.svg'),
+    ),
+);
+
+@import '~@common/scss/themes.scss';

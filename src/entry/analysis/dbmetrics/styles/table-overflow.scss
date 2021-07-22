@@ -1,0 +1,43 @@
+@mixin table-overflow {
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	::v-deep {
+		thead {
+			th {
+				min-width: 60px;
+			}
+			tr:not(:first-child) {
+				th {
+					border-top: none;
+				}
+
+				th:first-child {
+					border-left: none;
+				}
+			}
+			tr:last-child > th:first-child {
+				border-bottom-left-radius: 0 !important;
+			}
+		}
+		tbody {
+			td:not(:first-child) {
+				text-align: right;
+			}
+		}
+	}
+
+	&.overflow {
+		overflow-x: auto;
+		::v-deep table {
+			width: unset;
+			thead th {
+				/*min-width: 60px;*/
+				max-width: 60px;
+			}
+			.time-col {
+				min-width: 200px;
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+@import '../themes.scss';
+
+@mixin plain-text {
+  @include themify($themes) {
+    textarea {
+      font-family: 'Noto Mono' !important;
+      border: 0;
+      border-radius: 4px;
+      color: inherit;
+      resize: none;
+      cursor: text;
+      padding: 18px 16px;
+      background: themed('text-tab-background-color');
+      scroll-behavior: smooth;
+    }
+  }
+}

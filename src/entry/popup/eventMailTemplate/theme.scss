@@ -1,0 +1,10 @@
+.editor {
+  border-top: 1px solid $layoutBorderColor;
+}
+
+.splitter {
+  color: $splitterFontColor;
+  background-color: $splitterBackgroundColor;
+  border-top: 1px solid $layoutBorderColor;
+  border-bottom: 1px solid $layoutBorderColor;
+}

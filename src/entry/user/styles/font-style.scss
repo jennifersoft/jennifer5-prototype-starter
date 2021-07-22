@@ -1,0 +1,17 @@
+@mixin font-style {
+	.title {
+		font-size: 32px;
+		font-weight: bold;
+		color: #212121;
+		margin-bottom: 16px;
+	}
+	.description {
+		font-size: 16px;
+		line-height: 1.5;
+		color: #616161;
+		.link {
+			color: #6e18f8;
+			cursor: pointer;
+		}
+	}
+}

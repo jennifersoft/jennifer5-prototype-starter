@@ -1,0 +1,18 @@
+@mixin listing($name: "list", $duration: 400) {
+	.#{$name}-enter-active {
+		transition: opacity 0.3s;
+	}
+	.#{$name}-leave-active {
+		position: absolute;
+	}
+	.#{$name}-move {
+		transition: transform #{$duration}ms;
+	}
+	.#{$name}-enter {
+		opacity: 0;
+	}
+	.#{$name}-leave,
+	.#{$name}-leave-to {
+		opacity: 0;
+	}
+}

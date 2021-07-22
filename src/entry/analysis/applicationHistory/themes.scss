@@ -1,0 +1,24 @@
+$themes: (
+  classic: (
+          top-section-border-color: #e8e8e8,
+          top-section-font-color: #212121,
+          table-panel-button-border-color: #e8e8e8,
+          table-panel-label-font-color: #212121,
+          table-panel-label-default-background-color: #cce4f9,
+          table-panel-label-new-background-color: #cce7e1,
+          table-panel-label-modified-background-color: #d7d7d5,
+          table-panel-label-removed-background-color: #fddfcc,
+  ),
+  dark: (
+          top-section-border-color: #4e4e4e,
+          top-section-font-color: #fff,
+          table-panel-button-border-color: #4e4e4e,
+          table-panel-label-font-color: #fff,
+          table-panel-label-default-background-color: #4986E7,
+          table-panel-label-new-background-color: #2DA2BB,
+          table-panel-label-modified-background-color: #5E5E5E,
+          table-panel-label-removed-background-color: #E57128,
+  )
+);
+
+@import '~@common/scss/themes.scss';

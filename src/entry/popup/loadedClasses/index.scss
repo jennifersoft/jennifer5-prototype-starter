@@ -1,0 +1,15 @@
+body {
+  padding: 18px 24px;
+
+  #vue_app {
+    > .popup-header {
+      margin-bottom: 20px;
+
+      > .header-text {
+        line-height: 24px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+}

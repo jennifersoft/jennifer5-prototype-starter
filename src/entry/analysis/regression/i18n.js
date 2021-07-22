@@ -1,0 +1,38 @@
+import { i18n } from '@common/utility';
+
+export default {
+    bookmark: i18n.get('ui.label.bookmark'),
+    help: i18n.get('ui.label.help'),
+    periodSettingText: i18n.get('ui.label.period.config'),
+    operatingTime: i18n.get('ui.label.operatingTime'),
+    interval: i18n.get('ui.label.gatheringInterval'),
+    basedComparison: i18n.get('ui.label.basedComparison'),
+    preDefined: i18n.get('ui.label.preDefined'),
+    userSelection: i18n.get('ui.label.userSelection'),
+    day: i18n.get('ui.label.day'),
+    metrics: i18n.get('ui.label.metrics'),
+    search: i18n.get('ui.button.search'),
+    minute: i18n.get('ui.label.unit.minute'),
+    hour: i18n.get('ui.label.unit.hour'),
+    searchTerm: i18n.get('ui.label.template.searchTerm'),
+    target: i18n.get('ui.label.target'),
+    viewLarger: i18n.get('ui.label.view.larger'),
+    viewSmaller: i18n.get('ui.label.view.smaller'),
+
+    serviceTime: i18n.get('ui.mx.service_time'),
+    activeService: i18n.get('ui.mx.active_service'),
+    serviceRate: i18n.get('ui.mx.service_rate'),
+    errorCount: i18n.get('ui.mx.error_count'),
+    concurrentUser: i18n.get('ui.mx.concurrent_user'),
+    sqlTime: i18n.get('ui.mx.sql_time'),
+    fetchTime: i18n.get('ui.mx.fetch_time'),
+    externalcallTime: i18n.get('ui.mx.externalcall_time'),
+    aliveInstCount: i18n.get('ui.mx.alive_inst_count'),
+    gcTimeUsage: i18n.get('ui.mx.gc_time_usage'),
+    sysCpu: i18n.get('ui.mx.sys_cpu'),
+    sysMemRate: i18n.get('ui.mx.sys_mem_rate'),
+    threadCurrent: i18n.get('ui.mx.thread_current'),
+    avgDbPoolActiveCount: i18n.get('ui.mx.average_db_pool_active_count'),
+
+    M0573: i18n.get('M0573'),
+};

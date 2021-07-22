@@ -1,0 +1,50 @@
+@import '~@common/scss/themes.scss';
+
+$themes: (
+    classic: (
+        table-row-background-odd: #f9f9f9,
+        table-row-data: #212121,
+    ),
+    dark: (
+        table-row-background-odd: #222,
+        table-row-data: #e8e8e8,
+    ),
+);
+
+@mixin table-style {
+    @include themify($themes) {
+        width: 100%;
+        margin: 8px 0 24px;
+
+        tr {
+            height: 28px;
+
+            &:nth-child(2n-1) {
+                background-color: themed('table-row-background-odd');
+            }
+        }
+
+        tr,
+        td {
+            border: none;
+        }
+
+        td {
+            padding: 0 16px;
+            width: min-content;
+            overflow-x: hidden;
+            color: themed('table-row-data');
+
+            &:first-child {
+                width: 30%;
+            }
+
+            pre {
+                max-width: 816px;
+                white-space: pre-line;
+                overflow-wrap: anywhere;
+                word-wrap: anywhere;
+            }
+        }
+    }
+}

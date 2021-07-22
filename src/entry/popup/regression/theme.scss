@@ -1,0 +1,29 @@
+#popupContentBody {
+  background-color: transparent !important;
+
+  #regression-main {
+    .row-new {
+      .precision {
+        color: $precisionFontColor;
+      }
+
+      &.y {
+        color: $inputReadOnlyFontColor;
+      }
+    }
+
+    .splitter {
+      background-color: $lineBorderColor;
+    }
+
+    input {
+      color: $inputFontColor;
+      border: 1px solid $inputBorderColor;
+      background-color: $inputBackgroundColor;
+    }
+    input[readonly] {
+      color: $inputReadOnlyFontColor;
+      background-color: $inputReadOnlyBackgroundColor;
+    }
+  }
+}

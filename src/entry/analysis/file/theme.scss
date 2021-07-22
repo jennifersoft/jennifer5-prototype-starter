@@ -1,0 +1,14 @@
+$themes: (
+        classic: (
+                read-link-background-color: #cce7e1,
+                write-link-background-color: #f8cce6,
+                link-font-color: #212121,
+        ),
+        dark: (
+                read-link-background-color: #2da2bb,
+                write-link-background-color: #be4d90,
+                link-font-color: #fff,
+        )
+);
+
+@import '~@common/scss/themes.scss';

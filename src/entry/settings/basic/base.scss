@@ -1,0 +1,54 @@
+$themes: (
+    classic: (
+        app-splitter-border-color: #e8e8e8,
+        app-title-font-color: #222,
+        app-row-font-color: #212121,
+    ),
+    dark: (
+        app-splitter-border-color: #4e4e4e,
+        app-title-font-color: #e8e8e8,
+        app-row-font-color: #e8e8e8,
+    ),
+);
+
+@import '~@common/scss/themes.scss';
+
+.app {
+    @include themify($themes) {
+        padding: 18px 24px 24px 24px;
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            color: themed('app-title-font-color');
+            border-bottom: 1px solid themed('app-splitter-border-color');
+
+            margin-left: -24px;
+            margin-right: -24px;
+            padding-left: 24px;
+            padding-bottom: 16px;
+        }
+
+        .row {
+            display: flex;
+            padding: 24px 0px 40px 0px;
+            color: themed('app-row-font-color');
+            border-bottom: 1px solid themed('app-splitter-border-color');
+
+            > .left {
+                flex: 0 230px;
+                font-size: 14px;
+                font-weight: bold;
+                padding-right: 24px;
+            }
+            > .right {
+                flex: 1;
+            }
+        }
+
+        .footer {
+            margin-top: 24px;
+            text-align: center;
+        }
+    }
+}

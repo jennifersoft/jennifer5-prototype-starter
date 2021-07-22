@@ -1,0 +1,59 @@
+@import "~@common/scss/themes.scss";
+
+$themes: (
+		classic: (
+				border-color: #e8e8e8,
+		),
+		dark: (
+				border-color: #4e4e4e,
+		),
+);
+
+@mixin chart-grid($border-bottom: true) {
+	@include themify($themes) {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 3em;
+		width: 100%;
+		> .chart-box {
+			display: flex;
+			flex-direction: column;
+			border-top: 1px solid themed('border-color');
+
+			@if $border-bottom {
+				border-bottom: 1px solid themed('border-color');
+			}
+
+			> .total {
+				display: flex;
+				justify-content: space-between;
+
+				&.compared {
+					height: 32px;
+					line-height: 32px;
+					border-top: 1px solid themed('border-color');
+					> .values {
+						flex: 1;
+						display: flex;
+						justify-content: space-between;
+					}
+					> :last-child {
+						width: 20%;
+						text-align: right;
+					}
+				}
+
+				&.selected {
+					height: 40px;
+					line-height: 40px;
+					font-size: 14px;
+				}
+
+				& + .chart {
+					flex: 1;
+					margin-top: 32px;
+				}
+			}
+		}
+	}
+}

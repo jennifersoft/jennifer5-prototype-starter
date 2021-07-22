@@ -1,0 +1,60 @@
+//  from david
+// 1개의 themes 파일을 개별의 vue, scss 에서 로드하고 싶어서 써본 방법이다.
+//https://medium.com/@dmitriy.borodiy/easy-color-theming-with-scss-bc38fd5734d1
+// 원래는 @use를 써보고 싶었지만 dart scss 에서만 지원이 가능하다. https://sass-lang.com/documentation/at-rules/use
+
+$themes: (
+  classic: (
+      coponent-border-color: #c1c1c1,
+      coponent-active-border-color: #a1a1a1,
+
+      component-edit-area-background-color: #f4f4f6,
+      header-background-color: #FFFFFF,
+      header-text-color: #212121,
+      header-info-tooltip-background-color:  #ffffff,
+      header-info-tooltip-text-color:  #3d3d45,
+
+
+      area-menu-background-color: #ffffff,
+      area-menu-border-color: #e8e8e8,
+      area-menu-text-color: #616161,
+
+      edit-component-title1-color: #191919,
+      edit-component-title2-color: #212121,
+      edit-chart-tab-text-color: #616161,
+      edit-chart-tab-thumbnail-border-color: #dadada,
+
+      edit-text-tab-default-color: #f0f0f0,
+      area-topbar-background-color: #ffffff,
+      area-grid-canvas-background-color: #ffffff,
+
+      window-content-border-bottom-color: #e8e8e8,
+  ),
+  dark: (
+      coponent-border-color: #666,
+      coponent-active-border-color: #999,
+
+      component-edit-area-background-color: #161616,
+      header-background-color: #272727,
+      header-text-color: #ffffff,
+      header-info-tooltip-background-color:  #292929,
+      header-info-tooltip-text-color:  #ffffff,
+
+      area-menu-background-color: #292929,
+      area-menu-border-color: #4e4e4e,
+      area-menu-text-color: #999999,
+
+      edit-component-title1-color: #e8e8e8,
+      edit-component-title2-color: #e8e8e8,
+      edit-chart-tab-text-color: #999999,
+      edit-chart-tab-thumbnail-border-color: #4e4e4e,
+
+      edit-text-tab-default-color: #3d3d3d,
+      area-topbar-background-color: #272727,
+      area-grid-canvas-background-color: #1c1c1c,
+
+      window-content-border-bottom-color: #3c3c3c,
+  )
+);
+
+@import '~@common/scss/themes.scss';

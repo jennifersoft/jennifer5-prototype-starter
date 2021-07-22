@@ -1,0 +1,84 @@
+#dashboardContentBody {
+    padding: 0 !important;
+    #vue-app {
+        height: calc(100% - 56px);
+
+        .tooltip-balloon {
+            z-index: 1001;
+        }
+
+        .open-menu-layer {
+            top: 56px;
+            z-index: 1000;
+        }
+
+        > .contents {
+            height: 100%;
+            padding: 20px;
+
+            > .chart {
+                margin-top: 10px;
+                height: calc(100% - 48px);
+            }
+        }
+    }
+}
+
+.layout-contents {
+    > #vue_app {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .tooltip-balloon {
+            z-index: 1001;
+        }
+
+        > .contents {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+
+            > .chart {
+                flex-grow: 1;
+                padding: 20px;
+            }
+        }
+
+        #group_edit {
+            > .body {
+                padding: 10px;
+                > .content {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.topology {
+}
+
+body.classic {
+    $topologyXViewChartShowBtnBorder: 1px solid #b8b8b8;
+    $topologyXViewChartShowBtnBoxShadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    $topologyXViewChartShowBtnActiveBgColor: #f3f3f3;
+    $topologyXViewChartShowBtnActiveBoxShadow: 0 4px 5px -5px rgba(0, 0, 0, 0.3)
+        inset;
+    $topologyConfigBottomLineBorder: 1px solid #ddd;
+    $topologyDisplayNameTextColor: #201834;
+
+    @import 'theme';
+}
+
+body.dark {
+    $topologyXViewChartShowBtnBorder: 1px solid #4d4d4d;
+    $topologyXViewChartShowBtnBoxShadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+    $topologyXViewChartShowBtnActiveBgColor: #181818;
+    $topologyXViewChartShowBtnActiveBoxShadow: 0 4px 5px -5px rgba(0, 0, 0, 0.8)
+        inset;
+    $topologyConfigBottomLineBorder: 1px solid #4d4d4d;
+    $topologyDisplayNameTextColor: #d5d5d5;
+
+    @import 'theme';
+}

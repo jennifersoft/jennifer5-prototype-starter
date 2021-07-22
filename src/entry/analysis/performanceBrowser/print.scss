@@ -1,0 +1,53 @@
+@media print {
+    body {
+        padding: 1em;
+        margin: 0;
+        font-size: 12pt;
+    }
+
+    header {
+        display: none;
+    }
+
+    #vue_layers {
+        display: none;
+    }
+
+    .analysis-header {
+        display: none;
+    }
+
+    #domain-group-tree {
+        display: none;
+    }
+    #analysisContentBody {
+        .content {
+            > .search-condition-wrapper {
+                > .search-condition-box {
+                    display: none;
+                }
+                > .searched-condition-list {
+                    //flex: 0 0 340px;
+                    height: calc(100% - 28pt);
+                }
+
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                border-left: 0;
+                margin-bottom: 0;
+            }
+            > .line-perf-chart {
+                flex-grow: 4;
+                height: 80em;
+                > .chart-component {
+                    height: 100%;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+        }
+        .analysisRight {
+            display: none;
+        }
+    }
+}

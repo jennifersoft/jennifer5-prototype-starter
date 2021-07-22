@@ -1,0 +1,147 @@
+.search-bar {
+  border-bottom: $searchBarBorderColor;
+  background-color: $searchBarBackgroundColor;
+
+  > .title {
+    color: $searchBarTitleFontColor;
+  }
+
+  > .search-input {
+    border: $searchBarInputBorderColor;
+    background-color: $searchBarInputBackgroundColor;
+
+    > input[type=text] {
+      color: $searchBarInputTitleFontColor;
+    }
+  }
+
+  > .tools {
+    > .separator {
+      border-right: $searchBarSeparatorBorderColor;
+    }
+  }
+
+  i {
+    color: $searchBarIconFontColor;
+  }
+}
+
+.talk-list {
+  color: $talkListFontColor;
+  border-right: $talkListBorderColor;
+
+  > .list {
+    > .item {
+      &.active {
+        background-color: $talkListActiveBackgroundColor;
+        color: $talkListActiveFontColor;
+        .date {
+          color: $talkListActiveDescriptionDateColor !important;
+        }
+      }
+
+      &:hover {
+        background-color: $talkListHoverBackgroundColor;
+      }
+
+      > .description {
+        > .date {
+          color: $talkListDescriptionDateColor;
+        }
+      }
+
+      border-bottom: $talkListBorderColor;
+    }
+  }
+
+  > .page-navi {
+    border-top: $talkListBorderColor;
+    background-color: $talkListPageNavigationBackgroundColor;
+  }
+}
+
+.talk-article {
+  color: $talkArticleFontColor;
+
+  > .top {
+    border-bottom: $talkArticleBorderColor;
+
+    > .subject {
+      > .description {
+        > .date {
+          color: $talkArticleDescriptionDateFontColor;
+        }
+      }
+    }
+  }
+}
+
+.talk-comments {
+  > .input-box {
+    background-color: $talkCommentsInputBackgroundColor;
+
+    > .main {
+      > textarea {
+        background-color: $talkCommentsInputTextAreaBackgroundColor;
+        border: $talkCommentsInputTextAreaBorderColor;
+        color: $talkCommentsCommentFontColor;
+      }
+    }
+  }
+
+  > .comment {
+    color: $talkCommentsCommentFontColor;
+    border-top: $talkCommentsCommentBorderColor;
+
+    > .subject {
+      > .date {
+        color: $talkCommentsCommentDateFontColor;
+      }
+    }
+  }
+}
+
+.no-data {
+  border-bottom: $talkArticleBorderColor;
+  color: $talkFormCommonFontColor;
+}
+
+/deep/ .aries-ui-window {
+  input[type=text] {
+    color: $talkFormCommonFontColor;
+  }
+
+  .main {
+    > .message {
+      background-color: $talkFormFileDragBackgroundColor;
+    }
+
+    > textarea {
+      color: $talkFormCommonFontColor;
+    }
+
+    > .files {
+      > .file {
+        background-color: $talkFormFileBackgroundColor;
+        border: $talkFormFileBorderColor;
+
+        > div {
+          color: $talkFormFileNameFontColor;
+
+          > small {
+            color: $talkFormFileSizeFontColor;
+          }
+        }
+      }
+    }
+  }
+
+  > .foot {
+    .file-icon {
+      color: $talkFormCommonFontColor;
+    }
+    .file-text {
+      color: $talkFormCommonFontColor;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+//xview에서 전체공간을 사용하기 위해 생성. 향후에 필요할지도 몰라서 만듬.
+body {
+    > #main {
+        > #content {
+            > #analysisContentBody {
+                > div {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    z-index: 1000;
+
+                    &:not(.analysisRight) {
+                        padding: 0;
+                        left: 0;
+                        right: 154px;
+                    }
+                }
+            }
+        }
+    }
+}

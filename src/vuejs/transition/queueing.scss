@@ -1,0 +1,19 @@
+@mixin queueing($name: "queue") {
+	.#{$name}-enter-active {
+		transition: opacity 0.3s, transform 0.3s;
+	}
+	.#{$name}-leave-active {
+		position: absolute;
+	}
+	.#{$name}-move {
+		transition: transform 0.4s;
+	}
+	.#{$name}-enter {
+		opacity: 0;
+		transform: translateX(12px);
+	}
+	.#{$name}-leave,
+	.#{$name}-leave-to {
+		opacity: 0;
+	}
+}

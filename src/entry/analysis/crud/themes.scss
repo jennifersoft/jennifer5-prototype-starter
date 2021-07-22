@@ -1,0 +1,12 @@
+$themes: (
+  classic: (
+          detail-table-subject-font-color: #212121,
+          table-tool-bar-crud-popup-border-color: #e8e8e8,
+  ),
+  dark: (
+          detail-table-subject-font-color: #d3d3d3,
+          table-tool-bar-crud-popup-border-color: #3e3e3e,
+  )
+);
+
+@import '~@common/scss/themes.scss';

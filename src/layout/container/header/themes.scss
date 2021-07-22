@@ -1,0 +1,28 @@
+$themes: (
+    classic: (
+        common-header-background-color: #fff,
+        common-header-font-color: #232323,
+        common-header-divider-border-color: #dadada,
+        common-header-border-bottom: #e8e8e8,
+        report-header-background-color: #fff,
+        report-header-menu-font-color: #616161,
+        report-header-active-menu-font-color: #6330ee,
+        report-header-active-menu-border-color: #7745ff,
+        more-button-input-box-border-color: #e8e8e8,
+        layer-tree-bg-color: #ffffff,
+    ),
+    dark: (
+        common-header-background-color: #1c1c1c,
+        common-header-font-color: #d3d3d3,
+        common-header-divider-border-color: #4e4e4e,
+        common-header-border-bottom: #4e4e4e,
+        report-header-background-color: #1c1c1c,
+        report-header-menu-font-color: #999,
+        report-header-active-menu-font-color: #a47cff,
+        report-header-active-menu-border-color: #7745ff,
+        more-button-input-box-border-color: #4e4e4e,
+        layer-tree-bg-color: #292929,
+    ),
+);
+
+@import '~@common/scss/themes.scss';

@@ -1,0 +1,13 @@
+@mixin fade-down($offset: -20%) {
+	.fade-down-enter, .fade-down-leave-to {
+		opacity: 0;
+		transform: translateY($offset);
+	}
+	.fade-down-enter-to, .fade-down-leave {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	.fade-down-enter-active, .fade-down-leave-active {
+		transition: opacity .3s, transform .3s;
+	}
+}
