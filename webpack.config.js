@@ -5,17 +5,17 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 const CaseSensitivePathsPlugin = require("case-sensitive-paths-webpack-plugin");
 
 const outputPath = path.resolve(__dirname, "out");
-const entryPath = path.resolve(__dirname, "src/entry");
-const libraryPath = path.resolve(__dirname, "src/library");
-const layoutPath = path.resolve(__dirname, "src/layout");
-const commonPath = path.resolve(__dirname, "src/common");
-const stylePath = path.resolve(__dirname, "src/style");
-const vuejsPath = path.resolve(__dirname, "src/vuejs");
+const entryPath = path.resolve(__dirname, "packages/entry");
+const libraryPath = path.resolve(__dirname, "packages/library");
+const layoutPath = path.resolve(__dirname, "packages/layout");
+const commonPath = path.resolve(__dirname, "packages/common");
+const stylePath = path.resolve(__dirname, "packages/style");
+const vuejsPath = path.resolve(__dirname, "packages/vuejs");
 
 module.exports = {
   mode: "development",
   devtool: "cheap-module-eval-source-map",
-  entry: path.resolve(__dirname, "public/index"),
+  entry: path.resolve(__dirname, "src/index"),
   output: {
     path: outputPath,
     filename: "[name].js"
@@ -92,6 +92,7 @@ module.exports = {
     extensions: [".js", ".sass", ".scss", ".css", ".vue"]
   },
   devServer: {
+    contentBase: path.join(__dirname, "public"),
     host: "127.0.0.1",
     port: 3000,
     progress: true,
@@ -101,7 +102,7 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new HtmlWebPackPlugin({
-      template: path.resolve(__dirname, "public/index.html"),
+      template: path.resolve(__dirname, "src/index.html"),
       filename: "./index.html"
     }),
     new MiniCssExtractPlugin({
