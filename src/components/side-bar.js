@@ -30,36 +30,43 @@ export default {
         return {
             showMenu: false,
             showAlarm: false,
-        }
+        };
     },
     methods: {
         onClickMenuItem(key) {
-            if (key === 'alarm')
-                this.showAlarm = !this.showAlarm;
-            else if (key === 'dashboard')
-                this.showMenu = !this.showMenu;
+            if (key === 'alarm') this.showAlarm = !this.showAlarm;
+            else if (key === 'dashboard') this.showMenu = !this.showMenu;
             else {
                 this.showMenu = false;
                 this.showAlarm = false;
             }
-        }
+        },
     },
     render() {
         return (
             <SideBarWrapper>
-                <SideBarItem menuName={{ key: 'dashboard', displayName: '대시보드' }}
-                            onClick={this.onClickMenuItem} />
-                <SideBarItem menuName={{ key: 'alarm', displayName: '알람' }}
-                            onClick={this.onClickMenuItem} />
-                {this.showAlarm
-                    && <AlarmLayer newList={alarms}
-                                onClose={() => this.showAlarm = false} />}
-                {this.showMenu
-                    && <MenuLayer list={menus}
-                                title={"Dashboard"}
-                                onMouseleave={() => this.showMenu = false} />}
-
+                <SideBarItem
+                    menuName={{ key: 'dashboard', displayName: '대시보드' }}
+                    onClick={this.onClickMenuItem}
+                />
+                <SideBarItem
+                    menuName={{ key: 'alarm', displayName: '알람' }}
+                    onClick={this.onClickMenuItem}
+                />
+                {this.showAlarm && (
+                    <AlarmLayer
+                        newList={alarms}
+                        onClose={() => (this.showAlarm = false)}
+                    />
+                )}
+                {this.showMenu && (
+                    <MenuLayer
+                        list={menus}
+                        title={'Dashboard'}
+                        onMouseleave={() => (this.showMenu = false)}
+                    />
+                )}
             </SideBarWrapper>
         );
-    }
-}
+    },
+};
