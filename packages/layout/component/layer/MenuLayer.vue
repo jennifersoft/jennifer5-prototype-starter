@@ -3,18 +3,22 @@
         <div class="layer-header">
             <div class="title">{{ title }}</div>
         </div>
-        <search v-if="!hideSearch"
-                v-model="searchKeyword"
-                :placeholder="i18n.searchMenu"
-                :width="224" />
+        <search
+            v-if="!hideSearch"
+            v-model="searchKeyword"
+            :placeholder="i18n.searchMenu"
+            :width="224"
+        />
         <div class="menu-item-wrapper">
             <transition-group name="list">
-                <menu-item v-for="item in sortedList"
-                           :active="isActiveMenu(item)"
-                           :display-name="item.displayName"
-                           :image-url="item.imageUrl"
-                           :key="item.key"
-                           @click="onClickMenu(item)" />
+                <menu-item
+                    v-for="item in sortedList"
+                    :active="isActiveMenu(item)"
+                    :display-name="item.displayName"
+                    :image-url="item.imageUrl"
+                    :key="item.key"
+                    @click="onClickMenu(item)"
+                />
             </transition-group>
         </div>
     </div>
@@ -23,7 +27,7 @@
 <script>
 import MenuItem from '@layout/component/item/MenuItem';
 import { MENU_COUNT_KEY } from '@layout/constant';
-import Search from "@vuejs/component/Input/Search";
+import Search from '@vuejs/component/input/Search';
 
 export default {
     name: 'MenuLayer',
@@ -58,7 +62,7 @@ export default {
         hideSearch: {
             type: Boolean,
             default: false,
-        }
+        },
     },
     computed: {
         sortedList() {
@@ -74,14 +78,16 @@ export default {
                 })
                 .filter(e => {
                     if (this.searchKeyword.length === 0) return true;
-                    return e.displayName.toLowerCase().includes(this.searchKeyword.toLowerCase());
+                    return e.displayName
+                        .toLowerCase()
+                        .includes(this.searchKeyword.toLowerCase());
                 });
         },
     },
     data() {
         return {
             searchKeyword: '',
-        }
+        };
     },
     methods: {
         onClickMenu({ url }) {

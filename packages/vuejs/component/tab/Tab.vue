@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import Badge from '@vuejs/component/Label/Badge';
+import Badge from '@vuejs/component/label/Badge';
 import TooltipBalloon from '@vuejs/component/tooltip/TooltipBalloon';
 import { tooltipStyle } from '@vuejs/component/tooltip/Tooltip';
 import SizeMixin from '@vuejs/mixin/SizeMixin';

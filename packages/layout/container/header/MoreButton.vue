@@ -76,10 +76,10 @@
 
 <script>
 import Btn from '@vuejs/component/button/Btn';
-import PopupList from '@vuejs/component/Dropdown/PopupList';
+import PopupList from '@vuejs/component/dropdown/PopupList';
 import LayeredMenu from '@entry/popup/xviewAnalysis/component/LayeredMenu';
 import Window from '@vuejs/component/window/Window';
-import InputField from '@vuejs/component/Input/InputField';
+import InputField from '@vuejs/component/input/InputField';
 import ConfirmWindow from '@vuejs/component/window/ConfirmWindow';
 import { ICON_TYPE } from '@vuejs/component/icon/iconType';
 import clickOutside from '@vuejs/directive/clickOutside';

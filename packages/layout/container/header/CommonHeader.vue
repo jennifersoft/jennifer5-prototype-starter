@@ -59,13 +59,13 @@
 
 <script>
 import { createNamespacedHelpers } from 'vuex';
-import DomainGroupSelector from '@vuejs/component/Domain/DomainGroupSelector/DomainGroupSelector';
+import DomainGroupSelector from '@vuejs/component/domain/domainGroupSelector/DomainGroupSelector';
 import Btn from '@vuejs/component/button/Btn';
 import Tooltip from '@vuejs/component/tooltip/Tooltip';
 import MoreButton from './MoreButton';
 import { ICON_TYPE } from '@vuejs/component/icon/iconType';
 import { linkManual, hashManual } from '@common/utility';
-import LoadingIndicator from "@vuejs/component/Loading/LoadingIndicator";
+import LoadingIndicator from '@vuejs/component/loading/LoadingIndicator';
 
 import i18nMessages from '../../i18n';
 import DomainTreeLayer from '@layout/container/DomainTreeLayer';

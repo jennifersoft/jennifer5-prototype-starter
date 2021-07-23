@@ -158,7 +158,7 @@
 <script>
 import { createNamespacedHelpers } from 'vuex';
 import SideBarItem from '@layout/component/item/SideBarItem';
-import Badge from '@vuejs/component/Label/Badge';
+import Badge from '@vuejs/component/label/Badge';
 import MenuLayer from '@layout/component/layer/MenuLayer';
 import AlarmLayer from '@layout/component/layer/AlarmLayer';
 import NoticeLayer from '@layout/component/layer/NoticeLayer';

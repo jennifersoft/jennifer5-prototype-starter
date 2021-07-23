@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Btn from '@vuejs/component/button/Btn';
-import ListSelector from '@vuejs/component/ListSelector/ListSelector';
+import ListSelector from '@vuejs/component/listSelector/ListSelector';
 import SimpleChart from './SimpleChart';
 import SideBar from './components/side-bar';
 import styled from 'vue-styled-components';

@@ -41,8 +41,8 @@
 <script>
 import Btn from '@vuejs/component/button/Btn';
 import AlarmBox from '@layout/component/item/AlarmBox';
-import Chip from '@vuejs/component/Label/Chip';
-import ToggleSwitch from '@vuejs/component/Toggle/ToggleSwitch';
+import Chip from '@vuejs/component/label/Chip';
+import ToggleSwitch from '@vuejs/component/toggle/ToggleSwitch';
 import { ICON_TYPE } from '@vuejs/component/icon/iconType';
 
 export default {

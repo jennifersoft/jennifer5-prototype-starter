@@ -1,23 +1,21 @@
 <template>
-    <popup-list-composed :offset-x="60"
-                         :offset-y="offsetTop"
-                         normal>
-        <popup-list :items="accounts"
-                    :title="i18n.account"
-                    @update:active-index="$emit('click:user-menu', 'accountManagement')" />
-        <popup-list :items="utilities"
-                    @update:active-index="onClickUtility" />
-        <popup-list :items="extra"
-                    @update:active-index="onClickExtra" />
+    <popup-list-composed :offset-x="60" :offset-y="offsetTop" normal>
+        <popup-list
+            :items="accounts"
+            :title="i18n.account"
+            @update:active-index="$emit('click:user-menu', 'accountManagement')"
+        />
+        <popup-list :items="utilities" @update:active-index="onClickUtility" />
+        <popup-list :items="extra" @update:active-index="onClickExtra" />
     </popup-list-composed>
 </template>
 
 <script>
-import PopupListComposed from "@vuejs/component/Dropdown/PopupListComposed";
-import PopupList from "@vuejs/component/Dropdown/PopupList";
+import PopupListComposed from '@vuejs/component/dropdown/PopupListComposed';
+import PopupList from '@vuejs/component/dropdown/PopupList';
 
 export default {
-    name: "UserMenuLayer",
+    name: 'UserMenuLayer',
     inject: {
         i18n: {
             default: {
@@ -41,7 +39,7 @@ export default {
             type: Object,
             default: () => ({
                 name: '',
-                    email: '',
+                email: '',
             }),
         },
     },
@@ -64,19 +62,24 @@ export default {
                 text: `
                 <div style="display: flex; flex-direction: column; justify-content: space-between;">
                     <span class="marked">${name}</span>
-                    ${!!email ? `<span style="font-size: 12px;">${email}</span>` : ''}
+                    ${
+                        !!email
+                            ? `<span style="font-size: 12px;">${email}</span>`
+                            : ''
+                    }
                 </div>`,
                 value: 'name',
                 style: {
                     lineHeight: 1.2,
                     pointerEvents: 'none',
-                }
-            }, {
+                },
+            },
+            {
                 text: this.i18n.accountManagement,
                 value: 'accountManagement',
                 style: {
                     textDecoration: 'underline',
-                }
+                },
             },
         ];
         this.utilities = [
@@ -90,9 +93,7 @@ export default {
             { text: this.i18n.logout, value: 'logout' },
         ];
     },
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
