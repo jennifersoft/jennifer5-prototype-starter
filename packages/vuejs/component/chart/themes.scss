@@ -1,0 +1,20 @@
+$themes: (
+    classic: (
+        group-chart-active-background-color: #ede2ff,
+        group-chart-graph-background-color: rgba(0, 0, 0, 0.06),
+        async-detail-view-background-color: #fff,
+        async-detail-view-font-color: #212121,
+        active-score-font-color: #616161,
+        active-score-total-font-color: #212121,
+    ),
+    dark: (
+        group-chart-active-background-color: #281e3b,
+        group-chart-graph-background-color: rgba(255, 255, 255, 0.06),
+        async-detail-view-background-color: #292929,
+        async-detail-view-font-color: #e8e8e8,
+        active-score-font-color: #999,
+        active-score-total-font-color: #e8e8e8,
+    ),
+);
+
+@import '~@common/scss/themes.scss';

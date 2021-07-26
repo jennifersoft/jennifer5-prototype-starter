@@ -105,8 +105,8 @@ import VInstanceTooltip from './vInstanceTooltip';
 import { ElementManager } from '@common/legacy/ElementManager';
 import { ICON_TYPE } from '@vuejs/component/icon/iconType';
 import Btn from '@vuejs/component/button/Btn';
-import DropdownComposed from '@vuejs/component/Dropdown/DropdownComposed';
-import PopupList from '@vuejs/component/Dropdown/PopupList';
+import DropdownComposed from '@vuejs/component/dropdown/DropdownComposed';
+import PopupList from '@vuejs/component/dropdown/PopupList';
 import Instance from '@vuejs/container/topbar/Instance';
 import Domain from '@vuejs/container/topbar/Domain';
 import Scoreboard from '@vuejs/container/topbar/Scoreboard';
@@ -116,7 +116,7 @@ import { DomainBarBatchjobModeDef, LicenseStatusDef } from '@common/definition';
 import { setTopBarConfigure } from '@module/common/TopBarConfigure';
 import { SelectAgentEventListenerInDashboard } from '@module/chart/eventlistener/SelectAgentEventListenerInDashboard';
 import { TOPBAR_TYPES } from '@entry/userdefine/dashboardEdit/const';
-import Dropdown from '@vuejs/component/Dropdown/Dropdown';
+import Dropdown from '@vuejs/component/dropdown/Dropdown';
 
 const VIEW_INSTANCE_AND_VIEW_SCOREBOARD = 'view_instance_and_view_scoreboard';
 

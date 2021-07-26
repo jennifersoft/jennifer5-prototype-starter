@@ -1,4 +1,4 @@
-import { getAllChildren } from '@vuejs/component/Resource/Tree/treeAction';
+import { getAllChildren } from '@vuejs/component/resource/tree/treeAction';
 import { DomainGroupManager } from '@common/legacy/DomainGroupManager';
 import { Observer } from '@common/legacy/Observer';
 import { ElementManager } from '@common/legacy/ElementManager';

@@ -78,6 +78,10 @@ $themes: (
         topbar-shadow-color: rgba(0, 0, 0, 0.05),
         loading-btn-layer-background: rgba(0, 0, 0, 0.1),
         note-background: #f6f6f6,
+        auto-refresh-label-border-color: #dadada,
+        auto-refresh-label-background-color: #f0f0f0,
+        auto-refresh-label-font-color: #616161,
+        auto-refresh-label-button-background-color: #fff,
     ),
     dark: (
         typography-color-primary: #e8e8e8,
@@ -153,6 +157,10 @@ $themes: (
         topbar-shadow-color: rgba(0, 0, 0, 0.05),
         loading-btn-layer-background: rgba(255, 255, 255, 0.1),
         note-background: #222,
+        auto-refresh-label-border-color: #4e4e4e,
+        auto-refresh-label-background-color: #292929,
+        auto-refresh-label-font-color: #999999,
+        auto-refresh-label-button-background-color: #1c1c1c,
     ),
 );
 
