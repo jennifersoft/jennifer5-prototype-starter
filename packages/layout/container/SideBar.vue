@@ -1,54 +1,54 @@
 <template>
-    <div class="side-bar" v-click-outside="onClickOutside">
-        <div class="btn-group upper">
+    <side-bar-wrapper v-click-outside="onClickOutside">
+        <template #upper>
             <logo
-                class="top-logo"
-                :logo-url="logoPath"
-                clickable
-                @click="onClickLogo"
+                    class="top-logo"
+                    :logo-url="logoPath"
+                    clickable
+                    @click="onClickLogo"
             />
             <side-bar-item
-                :menu-name="{ displayName: i18n.dashboard, key: 'dashboard' }"
-                :active="showMenuLayer && activeMenu === 'dashboard'"
-                :dotted="
+                    :menu-name="{ displayName: i18n.dashboard, key: 'dashboard' }"
+                    :active="showMenuLayer && activeMenu === 'dashboard'"
+                    :dotted="
                     isActiveMenu('/dashboard') || isActiveMenu('/realtime')
                 "
-                @click="onClickMenuItem"
+                    @click="onClickMenuItem"
             />
             <side-bar-item
-                :menu-name="{
+                    :menu-name="{
                     displayName: i18n.userdefineddashboard,
                     key: 'userDefinedDashboard',
                 }"
-                :active="activeMenu === 'userDefinedDashboard'"
-                :dotted="isActiveMenu('/userdefine')"
-                @click="onClickMenuItem"
-                v-if="useUserdefine"
+                    :active="activeMenu === 'userDefinedDashboard'"
+                    :dotted="isActiveMenu('/userdefine')"
+                    @click="onClickMenuItem"
+                    v-if="useUserdefine"
             />
             <side-bar-item
-                :menu-name="{ displayName: i18n.analysis, key: 'analysis' }"
-                :active="showMenuLayer && activeMenu === 'analysis'"
-                :dotted="isActiveMenu('/analysis')"
-                @click="onClickMenuItem"
+                    :menu-name="{ displayName: i18n.analysis, key: 'analysis' }"
+                    :active="showMenuLayer && activeMenu === 'analysis'"
+                    :dotted="isActiveMenu('/analysis')"
+                    @click="onClickMenuItem"
             />
             <side-bar-item
-                :menu-name="{ displayName: i18n.statistics, key: 'statistics' }"
-                :active="showMenuLayer && activeMenu === 'statistics'"
-                :dotted="isActiveMenu('/statistics')"
-                @click="onClickMenuItem"
+                    :menu-name="{ displayName: i18n.statistics, key: 'statistics' }"
+                    :active="showMenuLayer && activeMenu === 'statistics'"
+                    :dotted="isActiveMenu('/statistics')"
+                    @click="onClickMenuItem"
             />
             <side-bar-item
-                :menu-name="{ displayName: i18n.report, key: 'report' }"
-                :active="activeMenu === 'report'"
-                :dotted="
+                    :menu-name="{ displayName: i18n.report, key: 'report' }"
+                    :active="activeMenu === 'report'"
+                    :dotted="
                     isActiveMenu('/report/template') ||
                         isActiveMenu('/report/document')
                 "
-                @click="onClickMenuItem"
-                v-if="(useTemplate || useDocument) && useNotification"
+                    @click="onClickMenuItem"
+                    v-if="(useTemplate || useDocument) && useNotification"
             />
-        </div>
-        <div class="btn-group lower">
+        </template>
+        <template #lower>
             <side-bar-item
                 v-if="showNoticeButton"
                 :menu-name="{ displayName: i18n.notice, key: 'notice' }"
@@ -93,7 +93,7 @@
                     @click:user-menu="onClickUserMenu"
                 />
             </span>
-        </div>
+        </template>
         <notice-layer
             v-if="showNoticeLayer"
             :notices="notices"
@@ -152,11 +152,12 @@
             @home="resetMngData"
         />
         <domain-setting v-if="!existDomain" @link-mng="openManagementLayer" />
-    </div>
+    </side-bar-wrapper>
 </template>
 
 <script>
 import { createNamespacedHelpers } from 'vuex';
+import SideBarWrapper from "@layout/component/SideBarWrapper";
 import SideBarItem from '@layout/component/item/SideBarItem';
 import Badge from '@vuejs/component/label/Badge';
 import MenuLayer from '@layout/component/layer/MenuLayer';
@@ -220,6 +221,7 @@ export default {
         },
     },
     components: {
+        SideBarWrapper,
         SideBarItem,
         MenuLayer,
         AlarmLayer,
@@ -491,43 +493,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.side-bar {
-    position: sticky;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    z-index: 10000;
-    padding: 20px 20px 24px;
-    box-sizing: border-box;
-    background-color: #000;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    > .btn-group {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        > .top-logo {
-            margin-bottom: 40px;
-            cursor: pointer;
-        }
-
-        > *:not(:last-child) {
-            margin-bottom: 24px;
-        }
-
-        .item-with-badge {
-            position: relative;
-            > .badge {
-                position: absolute;
-                right: -8px;
-                top: -8px;
-            }
-        }
-    }
-}
 </style>
