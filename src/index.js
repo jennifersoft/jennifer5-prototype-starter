@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Btn from '@vuejs/component/button/Btn';
 import ListSelector from '@vuejs/component/listSelector/ListSelector';
 import SimpleChart from './SimpleChart';
-import SideBar from './components/side-bar';
+import SideBar from './components/SideBar';
 import styled from 'vue-styled-components';
 import { metrics } from './sample-data';
 import './index.scss';
