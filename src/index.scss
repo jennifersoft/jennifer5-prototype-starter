@@ -1,9 +1,124 @@
-body,
-svg {
-    font-family: 'Noto Sans KR', 'Lucida Grande', 'Arial';
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Noto Sans KR'),
+        url('/fonts/noto-sans-kr-v11-latin_korean-regular.woff2')
+            format('woff2'),
+        url('/fonts/noto-sans-kr-v11-latin_korean-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Noto Sans KR'),
+        url('/fonts/noto-sans-kr-v11-latin_korean-700.woff2') format('woff2'),
+        url('/fonts/noto-sans-kr-v11-latin_korean-700.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Noto Sans JP'),
+        url('/fonts/noto-sans-jp-v23-japanese_latin-regular.woff2')
+            format('woff2'),
+        url('/fonts/noto-sans-jp-v23-japanese_latin-regular.woff')
+            format('woff');
+}
+
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Noto Sans JP'),
+        url('/fonts/noto-sans-jp-v23-japanese_latin-700.woff2') format('woff2'),
+        url('/fonts/noto-sans-jp-v23-japanese_latin-700.woff') format('woff');
+}
+
+html[lang='en'],
+html[lang='ko'] {
+    body,
+    svg,
+    input,
+    textarea {
+        font-family: 'Noto Sans KR', 'NanumGothic', 'Lucida Grande', 'Arial';
+    }
+}
+
+html[lang='ja'] {
+    body,
+    svg,
+    input,
+    textarea {
+        font-family: 'Noto Sans JP', 'Meiryo UI', 'Osaka', 'Lucida Grande',
+            'Arial';
+    }
 }
 
 body {
-    padding: 0;
+    font-size: 12px;
     margin: 0;
+    padding: 0;
+
+    iframe,
+    iframe:focus,
+    input,
+    input:focus,
+    textarea,
+    textarea:focus,
+    canvas,
+    canvas:focus {
+        outline: none;
+    }
+
+    canvas {
+        user-select: none;
+    }
+
+    a:visited,
+    a:hover,
+    a:link {
+        text-decoration: none;
+    }
+
+    /* 사이드 메뉴가 있는 레이아웃 */
+    .layout-root {
+        display: flex;
+
+        > .layout-toolbar {
+            width: 72px;
+        }
+        > .layout-contents {
+            flex: 1;
+            width: calc(100vw - 72px);
+            &:not(.layout-iframe) {
+                min-width: 952px;
+            }
+        }
+    }
+
+    /* 테마별 기본 색상 정의 */
+    &.classic {
+        color: #212121;
+        background-color: #fff;
+        a:visited,
+        a:hover,
+        a:link {
+            color: #333;
+        }
+    }
+    &.dark {
+        color: #e8e8e8;
+        background-color: #1c1c1c;
+        &.management {
+            background-color: #292929;
+        }
+        a:visited,
+        a:hover,
+        a:link {
+            color: #d5d5d5;
+        }
+    }
 }
