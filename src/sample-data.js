@@ -70,8 +70,7 @@ export const analysisMenus = [
         name: '애플리케이션 현황',
         type: 'analysis',
         url: '/analysis/service',
-        imageUrl:
-            '/images/analysis.png',
+        imageUrl: '/images/analysis.png',
         description: null,
         displayName: '애플리케이션 현황',
     },
@@ -80,8 +79,7 @@ export const analysisMenus = [
         name: '성능 브라우저',
         type: 'analysis',
         url: '/analysis/performanceBrowser',
-        imageUrl:
-            '/images/analysis.png',
+        imageUrl: '/images/analysis.png',
         description: null,
         displayName: '성능 브라우저',
     },
@@ -90,8 +88,7 @@ export const analysisMenus = [
         name: 'Metrics 회귀분석',
         type: 'analysis',
         url: '/analysis/regression',
-        imageUrl:
-            '/images/analysis.png',
+        imageUrl: '/images/analysis.png',
         description: null,
         displayName: 'Metrics 회귀분석',
     },
@@ -109,8 +106,7 @@ export const analysisMenus = [
         name: 'DB 검색',
         type: 'analysis',
         url: '/analysis/dbmetrics',
-        imageUrl:
-            '/images/analysis.png',
+        imageUrl: '/images/analysis.png',
         description: null,
         displayName: 'DB 검색',
     },
@@ -119,8 +115,7 @@ export const analysisMenus = [
         name: 'Browser/OS/Device',
         type: 'analysis',
         url: '/analysis/userAgent',
-        imageUrl:
-            '/images/analysis.png',
+        imageUrl: '/images/analysis.png',
         description: null,
         displayName: 'Browser/OS/Device',
     },
@@ -129,8 +124,7 @@ export const analysisMenus = [
         name: '소스코드(리소스) 변경 이력',
         type: 'analysis',
         url: '/analysis/applicationHistory',
-        imageUrl:
-            '/images/analysis.png',
+        imageUrl: '/images/analysis.png',
         description: null,
         displayName: '소스코드(리소스) 변경 이력',
     },
@@ -148,8 +142,7 @@ export const analysisMenus = [
         name: '시스템 환경변수',
         type: 'analysis',
         url: '/analysis/env',
-        imageUrl:
-            '/images/analysis.png',
+        imageUrl: '/images/analysis.png',
         description: null,
         displayName: '시스템 환경변수',
     },
@@ -185,8 +178,7 @@ export const analysisMenus = [
         name: '다이나믹 메서드 스택트레이스',
         type: 'analysis',
         url: '/analysis/methodStacktrace',
-        imageUrl:
-            '/images/analysis.png',
+        imageUrl: '/images/analysis.png',
         description: null,
         displayName: '다이나믹 메서드 스택트레이스',
     },
@@ -195,8 +187,7 @@ export const analysisMenus = [
         name: '지연 메소드 통계',
         type: 'analysis',
         url: '/analysis/delayMethod',
-        imageUrl:
-            '/images/analysis.png',
+        imageUrl: '/images/analysis.png',
         description: null,
         displayName: '지연 메소드 통계',
     },
@@ -223,8 +214,7 @@ export const analysisMenus = [
         name: 'Jar/DLL 파일 내 Class 검색',
         type: 'analysis',
         url: '/analysis/searchclass',
-        imageUrl:
-            '/images/analysis.png',
+        imageUrl: '/images/analysis.png',
         description: null,
         displayName: 'Jar/DLL 파일 내 Class 검색',
     },
@@ -233,8 +223,7 @@ export const analysisMenus = [
         name: '클래스 파일 위치 검색',
         type: 'analysis',
         url: '/analysis/jarcheck',
-        imageUrl:
-            '/images/analysis.png',
+        imageUrl: '/images/analysis.png',
         description: null,
         displayName: '클래스 파일 위치 검색',
     },
@@ -243,8 +232,7 @@ export const analysisMenus = [
         name: '수정된 파일 검색',
         type: 'analysis',
         url: '/analysis/modifyfile',
-        imageUrl:
-            '/images/analysis.png',
+        imageUrl: '/images/analysis.png',
         description: null,
         displayName: '수정된 파일 검색',
     },
@@ -264,8 +252,7 @@ export const statisticsMenus = [
         name: '일일 시스템 성능',
         type: 'statistics',
         url: '/statistics/dailySystem',
-        imageUrl:
-            '/images/statistics.png',
+        imageUrl: '/images/statistics.png',
         description: null,
         displayName: '일일 시스템 성능',
     },
@@ -274,8 +261,7 @@ export const statisticsMenus = [
         name: '일일 Business 성능',
         type: 'statistics',
         url: '/statistics/dailyBusiness',
-        imageUrl:
-            '/images/statistics.png',
+        imageUrl: '/images/statistics.png',
         description: null,
         displayName: '일일 Business 성능',
     },
@@ -284,8 +270,7 @@ export const statisticsMenus = [
         name: '월별 시스템 성능',
         type: 'statistics',
         url: '/statistics/monthlySystem',
-        imageUrl:
-            '/images/statistics.png',
+        imageUrl: '/images/statistics.png',
         description: null,
         displayName: '월별 시스템 성능',
     },
@@ -294,8 +279,7 @@ export const statisticsMenus = [
         name: '월별 Business 성능',
         type: 'statistics',
         url: '/statistics/monthlyBusiness',
-        imageUrl:
-            '/images/statistics.png',
+        imageUrl: '/images/statistics.png',
         description: null,
         displayName: '월별 Business 성능',
     },
@@ -304,8 +288,7 @@ export const statisticsMenus = [
         name: '기간별 시스템 성능',
         type: 'statistics',
         url: '/statistics/periodSystem',
-        imageUrl:
-            '/images/statistics.png',
+        imageUrl: '/images/statistics.png',
         description: null,
         displayName: '기간별 시스템 성능',
     },
@@ -314,8 +297,7 @@ export const statisticsMenus = [
         name: '기간별 Business 성능',
         type: 'statistics',
         url: '/statistics/periodBusiness',
-        imageUrl:
-            '/images/statistics.png',
+        imageUrl: '/images/statistics.png',
         description: null,
         displayName: '기간별 Business 성능',
     },
