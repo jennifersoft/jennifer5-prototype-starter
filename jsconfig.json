@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./",
+      "paths": {
+        "@library/*": ["packages/library/*"],
+        "@layout/*": ["packages/layout/*"],
+        "@common/*": ["packages/common/*"],
+        "@vuejs/*": ["packages/vuejs/*"],
+        "@style/*": ["packages/style/*"],
+      }
+    }
+  }
