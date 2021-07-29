@@ -5,25 +5,25 @@
             <side-bar-item
                 :menu-name="{ key: 'dashboard', displayName: '대시보드' }"
                 :active="showMenu && activeMenu === 'dashboard'"
-                :dotted="false"
+                :dotted="isActiveMenu('/dashboard')"
                 @click="onClickMenuItem"
             />
             <side-bar-item
                 :menu-name="{ key: 'analysis', displayName: '분석' }"
                 :active="showMenu && activeMenu === 'analysis'"
-                :dotted="false"
+                :dotted="isActiveMenu('/analysis')"
                 @click="onClickMenuItem"
             />
             <side-bar-item
                 :menu-name="{ key: 'statistics', displayName: '통계' }"
                 :active="showMenu && activeMenu === 'statistics'"
-                :dotted="false"
+                :dotted="isActiveMenu('/statistics')"
                 @click="onClickMenuItem"
             />
             <side-bar-item
                 :menu-name="{ key: 'report', displayName: '보고서' }"
                 :active="showMenu && activeMenu === 'report'"
-                :dotted="false"
+                :dotted="isActiveMenu('/report')"
                 @click="onClickMenuItem"
             />
         </template>
@@ -53,6 +53,8 @@
             v-if="showMenu"
             :list="menuSet[activeMenu]"
             :title="activeMenu | toUpperCase"
+            :is-active-menu="url => isActiveMenu(url, true)"
+            @link="route"
         />
         <user-menu-layer
             v-if="showUserMenu"
@@ -123,6 +125,10 @@ export default {
         },
     },
     methods: {
+        route(url) {
+            if (this.$route.path !== url) this.$router.push(url);
+            this.closeLayer();
+        },
         onClickMenuItem(key) {
             if (this.activeLayer === key) {
                 this.closeLayer();
@@ -140,7 +146,11 @@ export default {
             this.activeLayer = key;
         },
         onClickUserMenu() {},
-        isActiveMenu() {},
+        isActiveMenu(prefix, exact = false) {
+            const path = location.hash.slice(1);
+            if (exact) return path === prefix;
+            return path.startsWith(prefix);
+        },
         closeLayer() {
             this.activeLayer = this.activeMenu = null;
         },
