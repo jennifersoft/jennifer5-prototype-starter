@@ -114,6 +114,8 @@
             :title="i18n[activeMenu]"
             :list="menuSet[activeMenu]"
             :hide-search="hideSearchInMenuLayer"
+            :is-active-menu="url => isActiveMenu(url, true)"
+            @link="route"
         />
         <alarm-detail-window
             v-if="!!selectedAlarm"
@@ -319,6 +321,9 @@ export default {
             'fetchServerVersion',
             'checkLoginStatus',
         ]),
+        route(url) {
+            location.href = url;
+        },
         async onClickMenuItem(type = null) {
             if (!type) return;
 
@@ -381,7 +386,8 @@ export default {
             this.updateActiveLayer();
             this.updateAlarmListAsRead();
         },
-        isActiveMenu(prefix) {
+        isActiveMenu(prefix, exact = false) {
+            if (exact) return location.pathname === prefix;
             return location.pathname.startsWith(prefix);
         },
         hasSubmenu(menuName) {

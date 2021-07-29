@@ -13,7 +13,7 @@
             <transition-group name="list">
                 <menu-item
                     v-for="item in sortedList"
-                    :active="isActiveMenu(item)"
+                    :active="isActiveMenu(item.url)"
                     :display-name="item.displayName"
                     :image-url="item.imageUrl"
                     :key="item.key"
@@ -63,6 +63,10 @@ export default {
             type: Boolean,
             default: false,
         },
+        isActiveMenu: {
+            type: Function,
+            default: (url) => false,
+        },
     },
     computed: {
         sortedList() {
@@ -92,10 +96,7 @@ export default {
     methods: {
         onClickMenu({ url }) {
             this.updateMenuCount(url);
-            location.href = url;
-        },
-        isActiveMenu({ url }) {
-            return location.pathname === url;
+            this.$emit('link', url);
         },
         getMenuCountMap() {
             return JSON.parse(localStorage.getItem(MENU_COUNT_KEY) || '{}');
