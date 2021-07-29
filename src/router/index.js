@@ -5,7 +5,6 @@ import Main from '../views/Main';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    mode: 'history',
     routes: [
         { path: '/', component: Main },
         {
