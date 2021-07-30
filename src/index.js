@@ -1,7 +1,6 @@
 import Vue from 'vue';
-import router from './router';
 import SideBar from './components/SideBar';
-
+import router from './router';
 import './index.scss';
 
 new Vue({

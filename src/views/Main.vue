@@ -29,7 +29,7 @@
 import Btn from '@vuejs/component/button/Btn';
 import ListSelector from '@vuejs/component/listSelector/ListSelector';
 import SimpleChart from '../components/SimpleChart';
-import { metrics } from '../sample-data';
+import { metrics } from '../assets/sampleData';
 
 export default {
     components: {
@@ -64,13 +64,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.contents {
-    flex: 1;
-    padding: 28px 40px;
-    display: flex;
-    flex-direction: column;
-    > .item {
-        margin-bottom: 28px;
-    }
+.main {
+    padding: 16px 24px;
 }
 </style>

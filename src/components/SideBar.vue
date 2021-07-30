@@ -41,6 +41,7 @@
             </span>
             <side-bar-item
                 :menu-name="{ key: 'setting', displayName: '설정' }"
+                :active="activeMenu === 'setting'"
                 @click="onClickMenuItem"
             />
             <side-bar-item
@@ -66,6 +67,7 @@
 </template>
 
 <script>
+import _ from '@library/lodash';
 import MenuLayer from '@layout/component/layer/MenuLayer';
 import AlarmLayer from '@layout/component/layer/AlarmLayer';
 import UserMenuLayer from '@layout/component/layer/UserMenuLayer';
@@ -74,10 +76,7 @@ import SideBarWrapper from '@layout/component/SideBarWrapper';
 import Logo from '@layout/component/Logo';
 import Badge from '@vuejs/component/label/Badge';
 import clickOutside from '@vuejs/directive/clickOutside';
-
-import { menuSet, alarms, userInfo } from '../sample-data';
-
-import _ from '@library/lodash';
+import { menuSet, alarms, userInfo } from '../assets/sampleData';
 
 const USER_MENU_HEIGHT = 348;
 const MARGIN = 16;
@@ -94,7 +93,7 @@ export default {
         Badge,
     },
     directives: {
-        clickOutside
+        clickOutside,
     },
     data() {
         return {
@@ -136,13 +135,12 @@ export default {
             }
 
             switch (key) {
-                case 'dashboard':
-                case 'analysis':
-                case 'statistics':
-                    this.activeMenu = key;
-                    break;
+                case 'report':
+                case 'setting':
+                    this.route(`/${key}`);
             }
-            
+
+            this.activeMenu = key;
             this.activeLayer = key;
         },
         onClickUserMenu() {},
