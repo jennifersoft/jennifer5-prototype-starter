@@ -28,6 +28,7 @@ src 디렉토리에서 화면 개발을 하시면 되고, 제니퍼5 화면과 �
 그외 주로 사용하고 있는 라이브러리는 다음과 같습니다.
 
 * lodash : https://github.com/lodash/lodash
-* jquery : https://github.com/jquery/jquery (최대한 안쓰려고 함)
+* jquery : https://github.com/jquery/jquery
 * dayjs : https://github.com/iamkun/dayjs
-* juijs : https://github.com/juijs (차트와 그리드)
+* vue-graph : https://github.com/juijs/vue-graph
+* vue-sheets : https://github.com/juijs/vue-sheets
