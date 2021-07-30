@@ -1,7 +1,7 @@
 <template>
     <side-bar-wrapper v-click-outside="closeLayer">
         <template #upper>
-            <logo logo-url="/images/logo.svg" />
+            <logo logo-url="/images/logo.svg" clickable @click="route('/')" />
             <side-bar-item
                 :menu-name="{ key: 'dashboard', displayName: '대시보드' }"
                 :active="showMenu && activeMenu === 'dashboard'"
