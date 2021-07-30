@@ -32,3 +32,8 @@ src 디렉토리에서 화면 개발을 하시면 되고, 제니퍼5 화면과 �
 * dayjs : https://github.com/iamkun/dayjs
 * vue-graph : https://github.com/juijs/vue-graph
 * vue-sheets : https://github.com/juijs/vue-sheets
+
+
+## 제니퍼5 화면 컴포넌트 예제
+
+https://storybook.jennifersoft.com/
