@@ -2,8 +2,14 @@
     <div class="main">
         <div class="item">
             <h3>JENNIFER5 공통 컴포넌트</h3>
-            <btn :items="button1" />
-            <btn :items="button2" />
+            <btn :items="button1"></btn>
+            <btn :items="button2"></btn>
+
+            <br />
+            <br />
+            <format-date-input :time="now" :messages="i18n"></format-date-input>
+            <br />
+
             <list-selector
                 :list="metrics"
                 multi-select
@@ -26,13 +32,16 @@
 </template>
 
 <script>
+import { getDayjs } from '@common/base';
 import Btn from '@vuejs/component/button/Btn';
 import ListSelector from '@vuejs/component/listSelector/ListSelector';
+import FormatDateInput from '@vuejs/component/input/FormatDateInput';
 import SimpleChart from '../components/SimpleChart';
 import { metrics } from '../assets/sampleData';
 
 export default {
     components: {
+        FormatDateInput,
         Btn,
         ListSelector,
         SimpleChart,
@@ -44,6 +53,12 @@ export default {
             fontSize: 11,
             fontWeight: 'bold',
             chartData: [10, 20, 30, 20, 10],
+            now: getDayjs(),
+            i18n: {
+                apply: 'apply',
+                cancel: 'cancel',
+                dayLabels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'],
+            },
         };
     },
     methods: {
